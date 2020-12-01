@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(https://i.ibb.co/7V8hZqY/pizza-2589577-1920.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y repeat-x;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    ". c c ."
+    ". b b .";
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: coral;
+  border: 3px solid black;
+  border-radius: 1rem 1rem 1rem 1rem;
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: red;
+  padding: 0 2rem 0 2rem;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+
+header > img {
+  width: 5rem;
+  height: auto;
+  margin: 0;
+}
+
+.grid > div.c {
+  grid-area: c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 15rem 0 2rem 0;
+  border: 5px solid black;
+  border-radius: 4rem;
+  padding: 2rem;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid > div.c > img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.grid > div.c > .title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#form {
+  width: 100%;
+  padding: 0;
+}
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px 0 0 0;
+}
+
+#submit {
+  padding: 0;
+  width: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+  background-color: coral;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+#submit:hover {
+  box-shadow: 1px 1px 3px rgb(82, 56, 47);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  box-shadow: 1px 1px 3px rgb(82, 56, 47);
+}
+
+#pizza {
+  border-radius: 3rem 3rem 10px 10px;
+}
+
+.grid > div.c > p.title {
+  font-weight: 900;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.grid > div.c > p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+#nav-bar > a {
+  display: inline-block;
+  margin: 2vw;
+}
+#pizzaMaker {
+  border-radius: 10px;
+}
+
+#video {
+  margin-top: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+.grid > div.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* margin: 0;
+  padding: ; */
+}
+@media (max-width: 650px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  .grid > div.c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background-color: coral;
+    border: 3px solid black;
+    border-radius: 1rem 1rem 1rem 1rem;
+    grid-area: header;
+    color: red;
+    padding: 0 0 0 0;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  header > img {
+    display: none;
+  }
+
+  #video {
+    width: 100%;
+    height: 70%;
+  }
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  .grid > div.c {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    opacity: 0.92;
+  }
+}
